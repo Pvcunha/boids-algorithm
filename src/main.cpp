@@ -30,7 +30,7 @@ int main(void)
         }
 
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-            ball temp = ball(GetMousePosition(), v, 10.0f);
+            ball temp = ball(GetMousePosition(), v, {0.5f, 0.5f}, 10.0f);
             balls.push_back(temp);
         }
         // Draw

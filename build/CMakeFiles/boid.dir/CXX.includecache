@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/pedro/programming/boid/src/core.cpp
+core.h
+/home/pedro/programming/boid/src/core.h
+iostream
+-
+math.h
+-
+
 /home/pedro/programming/boid/src/core.h
 raylib.h
 /home/pedro/programming/boid/src/raylib.h

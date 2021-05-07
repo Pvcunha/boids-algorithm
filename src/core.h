@@ -3,6 +3,8 @@
 
 #include "raylib.h"
 
+const float MAX_ACC = 10.0f;
+
 Vector2 operator+(const Vector2& a, const Vector2& b);
 
 Vector2 operator-(const Vector2& a, const Vector2& b);
@@ -20,10 +22,11 @@ class ball {
     
     public:
         Vector2 pos;
-        Vector2 v;
+        Vector2 vel;
+        Vector2 acc;
         double radius;
         
-        ball(Vector2 pos, Vector2 v, double radius);
+        ball(Vector2 pos, Vector2 v, Vector2 acc, double radius);
         void check_bounds(int width, int height);
         void update();
 };
