@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pedro/programming/boid/src/core.h
+raylib.h
+/home/pedro/programming/boid/src/raylib.h
+
+/home/pedro/programming/boid/src/main.cpp
+core.h
+/home/pedro/programming/boid/src/core.h
+iostream
+-
+
