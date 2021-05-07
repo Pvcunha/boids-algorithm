@@ -1,3 +1,0 @@
-/home/pedro/programming/boid/build/CMakeFiles/rebuild_cache.dir
-/home/pedro/programming/boid/build/CMakeFiles/edit_cache.dir
-/home/pedro/programming/boid/build/CMakeFiles/boid.dir
