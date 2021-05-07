@@ -3,6 +3,7 @@
 
 CMakeFiles/boid.dir/src/core.cpp.o
  /home/pedro/programming/boid/src/core.cpp
+ /home/pedro/programming/boid/src/core.h
 CMakeFiles/boid.dir/src/main.cpp.o
  /home/pedro/programming/boid/src/core.h
  /home/pedro/programming/boid/src/main.cpp
