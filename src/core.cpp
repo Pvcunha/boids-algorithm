@@ -34,41 +34,24 @@ double mag(Vector2 &a) {
     return sqrt(a.x*a.x + a.y*a.y);
 }
 
+double dist(Vector2 a, Vector2 b) {
+    return sqrt((a.x - b.x)*(a.x- b.x) + (a.y - b.y)*(a.y - b.y));
+}
+
 void normalize(Vector2 &a) {
     double m = mag(a);
     a = a / m;
 }
 
-void limit(Vector2 &a) {
+double setMag(Vector2 &a, double val) {
+    normalize(a);
+    a = a * val;
+}
+
+void limit(Vector2 &a, double max) {
     double m = mag(a);
-    if(m > MAX_ACC) {
+    if(m > max) {
         normalize(a);
-        a = a * MAX_ACC;
+        a = a * max;
     }
-}
-
-ball::ball(Vector2 pos, Vector2 vel, Vector2 acc, double radius) {
-    this->pos = pos;
-    this->vel = {0.0, 0.0};
-    this->acc = acc;
-    this->radius = radius;
-}
-
-void ball::check_bounds(int width, int height) {
-    if(pos.x > width)
-        pos.x = 0;
-    else if(pos.x < 0)
-        pos.x = width;
-    
-
-    if(pos.y < 0)
-        pos.y = height;
-    else if(pos.y > height)
-        pos.y = 0;
-}
-
-void ball::update() {
-    vel = vel + acc;
-    limit(vel);
-    pos = pos + vel;
 }
