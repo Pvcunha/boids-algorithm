@@ -36,8 +36,9 @@ void boid::alignment(std::vector<boid> &boids) {
     if(cont > 0) {
         Vector2 steer;
         steer = avg / cont;
+        setMag(steer, MAX_SPEED);
         steer = steer - this->vel;
-        limit(steer, 1);
+        limit(steer, MAX_FORCE);
         this->acc = steer;
     }
 

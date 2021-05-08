@@ -43,7 +43,7 @@ void normalize(Vector2 &a) {
     a = a / m;
 }
 
-double setMag(Vector2 &a, double val) {
+void setMag(Vector2 &a, double val) {
     normalize(a);
     a = a * val;
 }

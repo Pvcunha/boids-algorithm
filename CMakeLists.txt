@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY bin )
 
 add_executable(${PROJECT_NAME} src/main.cpp 
-    src/core.cpp
+    src/core.cpp src/boid.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} raylib)

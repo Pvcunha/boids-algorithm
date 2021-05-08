@@ -26,6 +26,7 @@ int main(void)
             pos.y = GetRandomValue(0, screenWidth);
             vel.x = GetRandomValue(0, 4);
             vel.y = GetRandomValue(0, 4);
+            setMag(vel, MAX_SPEED);
             boid temp = boid(pos, vel , {0,0}, 5.0);
             boids.push_back(temp);
         }
