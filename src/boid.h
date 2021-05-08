@@ -15,9 +15,9 @@ class boid {
         void check_bounds(int width, int height);
 
         void update(std::vector<boid> boids);
-        void separation(std::vector<boid> &boids);
-        void alignment(std::vector<boid> &boids);
-        void cohesion(std::vector<boid> &boids);
+        Vector2 separation(std::vector<boid> &boids);
+        Vector2 alignment(std::vector<boid> &boids);
+        Vector2 cohesion(std::vector<boid> &boids);
 };
 
 

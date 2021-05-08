@@ -5,7 +5,7 @@
 #include <vector>
 
 const double MAX_SPEED = 4.0;
-const double MAX_FORCE = 0.3;
+const double MAX_FORCE = 0.2;
 
 Vector2 operator+(const Vector2& a, const Vector2& b);
 

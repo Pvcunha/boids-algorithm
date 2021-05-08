@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 
-#define BUILD
+#define END
 
 int main(void)
 {
@@ -11,7 +11,7 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - mouse input");
+    InitWindow(screenWidth, screenHeight, "Boids");
 
     std::vector<boid> boids;
     Vector2 v = {2.0f, 2.0f};
@@ -20,7 +20,7 @@ int main(void)
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     
     #ifdef BUILD
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < 150; i++) {
             Vector2 pos, vel;
             pos.x = GetRandomValue(0, screenWidth);
             pos.y = GetRandomValue(0, screenWidth);
@@ -44,7 +44,11 @@ int main(void)
 
         #ifdef END
             if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-                boid temp = boid(GetMousePosition(), v, {0.5f, 0.5f}, 10.0f);
+                Vector2 vel;
+                vel.x = GetRandomValue(0, 4);
+                vel.y = GetRandomValue(0, 4);
+                setMag(vel, MAX_SPEED);
+                boid temp = boid(GetMousePosition(), vel, {0.0}, 5.0f);
                 boids.push_back(temp);
             }
         #endif
